@@ -7,8 +7,9 @@ double trap_com(double, double, int, double (*funcp)(double));
 
 int main(void)
 {
-    double s = trap_com(0, M_PI, 10, sin);
-    printf("%lf\n", s);
+    printf("sin(x)を積分(範囲：%lf ~ %lf)(分割数：%d)すると%lf\n", 0.0, M_PI, 10, trap_com(0, M_PI, 10, sin));
+    printf("cos(x)を積分(範囲：%f ~ %lf)(分割数：%d)すると%lf\n", 0.0, M_PI, 10, trap_com(0, M_PI, 10, cos));
+    printf("x^2を積分(範囲：%lf ~ %lf)(分割数：%d)すると%lf\n", 0.0, 2.0, 10, trap_com(0, 2, 10, x_2));
     return 0;
 }
 
